@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Revisão JavaScript</title>
+
+</head>
+<body>
+    <h1>Atribuições e Operadores Aritiméticos</h1>
+
+    <h2>Atribuições</h2>
+    <p>Quando desejamos receber do usuário algum valor e armazenar dentro de uma variável de maneira simples, podemos fazer da seguinte forma.</p>
+
+    <pre>
+        <code>
+        var nome = window.prompt('Qual o seu nome?')
+        window.alert(nome)
+        </code>
+    </pre>
+
+    <p> Nesse exemplo, nós atribuimos o resultado de <code style='color: purple'> window.prompt('Qual o seu nome?') </code> para a variavel "nome" e logo em seguida, exibimos ele na tela com o comando <code style='color: purple'> window.alert(nome)</code>
+
+    <h2>Operadores Aritiméticos</h2>
+    <p>Segue abaixo a lista dos símbolos Aritiméticos usados pela linguaem JavaScript</p>
+
+    <table border='1px' style='text-align: center'>
+
+        <tr>
+            <th>Simbolos</th>
+            <th>Operação</th>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td>Adição/Concatenação</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Subtração</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>Multiplicação</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>Divisão</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>Resto de divisão</td>
+        </tr>
+        <tr>
+            <td>**</td>
+            <td>Exponeciação</td>
+        </tr>
+    </table>
+
+    <p>Agora use o conhecimento adquirido até agora para realizar as seguintes tarefas:</p>
+    <ul>
+        <li>Receba dois números do usuário e mostre a soma, a subtração, a multiplcação e a divisão entre os dois.
+        <li>Receba um número e mostre ele elevado ao quadrado e ao cubo
+        <li>Receba um número e mostre ele com 10% de desconto e com 10% de acréscimo.
+    </ul>
+
+    <p>Lembre-se, tudo que existe no navegador, é tradado como string. Ou seja, para realizar operações matemáticas, voce deve primeiro converter o valor vindo do navegador, usando a função <code style='color: purple'>Number()</code>
+    <a href="index.html">Voltar para página inicial</a>
+<script>
+    //Receber dois números e mostrar as 4 operações básicas
+    var n1 = prompt('Digite um número:')
+    var n2 = prompt('Digite outro número:')
+    var soma = Number(n1) + Number(n2)
+    var subtracao = Number(n1) - Number(n2)
+    var multiplicacao = Number(n1) * Number(n2)
+    var divisao = Number(n1) / Number(n2)
+    window.alert(`A soma é ${soma}, a subtração é ${subtracao}, a multiplicação é ${multiplicacao} e a divisão é ${divisao}.`)
+
+    //Receber um número e mostrar ele elevado ao quadrado e ao cubo
+    var n3 = prompt('Digite um número: ')
+    var exponenciacao = Number(n3) ** 2
+    var exponenciacao2 = Number(n3) ** 3
+    window.alert(`O número ${n3} elevado ao cubo é ${exponenciacao}, o número ${n3} elevado ao cubo é ${exponenciacao2}`)
+
+    //Receber um número e mostrar valor com acréscimo e desconto
+    var n4 = Number(prompt('Digite um número:'))
+    //var desconto = n4 - (n4 * 0.1)
+    //var acresimo = n4 + (n4 * 0.1)
+    var d = n4 * 0.9
+    var a =  parseInt(n4 * 1.1)
+    window.alert(`O valor ${n4} com desconto é ${d} e o valor ${n4} com acresimo é ${a}`)
+</script>
+</body>
+</html>
